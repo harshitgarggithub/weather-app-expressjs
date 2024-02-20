@@ -7,6 +7,7 @@ const temp_real_val = document.getElementById('temp_real_val');
 const temp_status = document.getElementById('temp_status');
 
 const datahide = document.querySelector('.middle_layer');
+let date = new Date().toDateString();
 
 
 const getInfo = async(event) =>{

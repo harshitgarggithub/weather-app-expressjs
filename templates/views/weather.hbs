@@ -22,11 +22,11 @@
 
                 <div class="tempInformation">
                     <div class="top_layer">
-                        <p id="day">Tuesday</p>
-                        <p id="today_data">13 OCT</p>
+                        <p id="day"></p>
+                        <p id="demo"></p>
                     </div>
                     <div class="main_layer ">
-                        <p id="city_name">Get Output Here</p>
+                        <p id="city_name">Get Current Weather</p>
                         <div class="middle_layer data_hide">
                             <p id="temp"><span id="temp_real_val">0</span> <sup>o</sup>C</p>
                             <p id="temp_status"> <i class="fa fa-cloud" aria-hidden="true"></i> </p>
@@ -41,9 +41,13 @@
     <!-- footer code -->
     {{>footer}}
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+    </script>
     <script>
+        const d = new Date();
+        const dateString = d.toISOString().split('T')[0];
 
+      document.getElementById("demo").innerHTML = dateString;
         const getCurrentDay = () => {
             let weekday = new Array(7);
             weekday[0] = "Sunday";
