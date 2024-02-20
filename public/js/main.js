@@ -11,14 +11,14 @@ const datahide = document.querySelector('.middle_layer');
 
 const getInfo = async(event) =>{
     event.preventDefault();
-    let cityVal = cityName.value; 
-    if(cityVal === ""){
+    let search = cityName.value; 
+    if(search === ""){
         city_name.innerText = `Plz write the name before search`;
         datahide.classList.add('data_hide');
 
     }else{
         try{
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=b14425a6554d189a2d7dc18a8e7d7263`;
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=8986523c15cd10dc9528b60469694d24`;
             const response = await fetch(url);
             const data = await response.json();
            const arrData = [data];
