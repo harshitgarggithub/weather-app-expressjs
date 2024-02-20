@@ -19,7 +19,8 @@ const getInfo = async(event) =>{
 
     }else{
         try{
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=8986523c15cd10dc9528b60469694d24`;
+            //let url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=8986523c15cd10dc9528b60469694d24`;
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=c4aa414a99d03e3a8bcb9511d42e5f18`;
             const response = await fetch(url);
             const data = await response.json();
            const arrData = [data];
